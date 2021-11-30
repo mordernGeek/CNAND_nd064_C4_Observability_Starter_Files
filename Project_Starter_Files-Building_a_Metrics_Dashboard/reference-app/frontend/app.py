@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from jaeger_client import Config
 from flask_opentracing import FlaskTracing
+import logging
 from opentracing_instrumentation.client_hooks import install_all_patches
 
 app = Flask(__name__)
@@ -29,7 +30,7 @@ def homepage():
 def test():
     # Adding the span feature...
      with tracer.start_span('frontSpan') as span:
-        req = requests.get('https://147.182.198.136:3000.com') # ping my own grafana
+        req = requests.get('https://147.182.198.136:3000') # fetch my own grafana dashboard
         span.set_tag('http.method;', req)
         def format():
             with tracer.start_span('front-span') as span:
