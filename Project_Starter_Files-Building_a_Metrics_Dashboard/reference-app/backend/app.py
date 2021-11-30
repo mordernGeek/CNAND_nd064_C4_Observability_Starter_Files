@@ -4,6 +4,7 @@ import pymongo
 from flask_pymongo import PyMongo
 from jaeger_client import Config
 from flask_opentracing import FlaskTracing
+import logging 
 
 app = Flask(__name__)
 
@@ -14,7 +15,7 @@ config = Config(
          'param': 1},
                         'logging': True,
                         'reporter_batch_size': 1,}, 
-                        service_name="service")
+                        service_name="backend")
 jaeger_tracer = config.initialize_tracer()
 tracing = FlaskTracing(jaeger_tracer, True, app)
 
@@ -29,7 +30,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def homepage():
-    return "Hello World"
+    return "Hello World, i'm tracing!"
 
 
 @app.route("/api")
