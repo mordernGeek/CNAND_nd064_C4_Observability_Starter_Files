@@ -18,6 +18,8 @@ config = Config(
 jaeger_tracer = config.initialize_tracer()
 tracing = FlaskTracing(jaeger_tracer, True, app)
 
+#i also want to trace all requests 
+install_all_patches()
 test()
 
 @app.route("/")
