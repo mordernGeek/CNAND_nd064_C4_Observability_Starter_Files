@@ -3,6 +3,7 @@
 ## Verify the monitoring installation
 
 *TODO:* run `kubectl` command to show the running pods and services for all components. Take a screenshot of the output and include it here to verify the installation
+##done
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
@@ -12,9 +13,18 @@
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
+service level indicators are flags we put in place to identify if we meet the SLOs, so for 
+monthly uptime - availability during specified month benchmarked against the SLO
+request response time - latency of the server response benchmarked against the SLO
 
 ## Creating SLI metrics.
 *TODO:* It is important to know why we want to measure certain metrics for our customer. Describe in detail 5 metrics to measure these SLIs. 
+percentage uptime per month - availabiliy
+no of server downtimes in the month -errors
+latency rate per order -latency
+total orders/requests per month - traffic
+total fulfillment of orders per month
+
 
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
@@ -30,11 +40,11 @@
 
 TROUBLE TICKET
 
-Name:
+Name: Damilola Banjoko
 
-Date:
+Date: 27/11/2021
 
-Subject:
+Subject: SLI feedback
 
 Affected Area:
 
@@ -45,9 +55,16 @@ Description:
 
 ## Creating SLIs and SLOs
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
+latency
+traffic
+saturation 
+errors
 
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
+ensure 99.95% uptime 
+reduce latency by 5%
+reduce network saturation by 25%
 
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
