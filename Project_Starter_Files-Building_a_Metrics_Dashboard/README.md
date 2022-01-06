@@ -49,6 +49,8 @@ Also provide a (screenshot) sample Python file containing a trace and span code 
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
 ...
 #i can't find my updated screenshot...
+![jaeger](https://github.com/mordernGeek/CNAND_nd064_C4_Observability_Starter_Files/blob/master/answer-img/jaeger%20up%20and%20running.PNG "initial")
+
 
 ## Report Error
 *TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and 
