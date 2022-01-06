@@ -18,7 +18,7 @@ include it here to verify the installation
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
 ##done
-![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")
+![Alt text](https://github.com/mordernGeek/CNAND_nd064_C4_Observability_Starter_Files/blob/master/answer-img/datasource%20prometheus%20metrics.PNG "a title")
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
@@ -48,12 +48,15 @@ Also provide a (screenshot) sample Python file containing a trace and span code 
 ## Jaeger in Dashboards
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
 ...
+#i can't find my updated screenshot...
 
 ## Report Error
 *TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and 
 to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
 
-#Can't find my screenshot, not to worry i will update my github where it belongs later.
+![jaeger tracer span](https://github.com/mordernGeek/CNAND_nd064_C4_Observability_Starter_Files/blob/master/answer-img/python%20sample%20to%20span%20as%20requested.PNG "tracer_span?")
+
+#i can't find my updated screenshot...
 
 TROUBLE TICKET
 
@@ -89,3 +92,10 @@ reduce network saturation by 25%
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. 
 Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
+
+![my_first_dashboard](https://github.com/mordernGeek/CNAND_nd064_C4_Observability_Starter_Files/blob/master/answer-img/updating%20my%20new%20dashboard.PNG" KPIs")
+
+
+total requests measures saturation by checking http requests
+Latency measures delay/ load time
+CPU Speed monitors performance thus availability
