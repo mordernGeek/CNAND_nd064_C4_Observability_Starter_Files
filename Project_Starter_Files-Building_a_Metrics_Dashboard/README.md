@@ -1,70 +1,91 @@
 **Note:** For the screenshots, you can store all of your answer images in the `answer-img` directory.
 
+## Please kindly check the 'answer-img' directory for all your required screenshots. *thanks*
+
 ## Verify the monitoring installation
 
-*TODO:* run `kubectl` command to show the running pods and services for all components. Take a screenshot of the output and include it here to verify the installation
+*TODO:* run `kubectl` command to show the running pods and services for all components. Take a screenshot of the output and 
+include it here to verify the installation
 ##done
+![metrics_dashboard](https://github.com/mordernGeek/CNAND_nd064_C4_Observability_Starter_Files/blob/master/answer-img/get%20all.PNG"get all")
+
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
+##done 
+![grafana_dashboard](https://github.com/mordernGeek/CNAND_nd064_C4_Observability_Starter_Files/blob/master/answer-img/grafana%20login%20dashboard.PNG "Grafana post-login")
 
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
+##done
+![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
+#done
 service level indicators are flags we put in place to identify if we meet the SLOs, so for 
 monthly uptime - availability during specified month benchmarked against the SLO
 request response time - latency of the server response benchmarked against the SLO
 
 ## Creating SLI metrics.
 *TODO:* It is important to know why we want to measure certain metrics for our customer. Describe in detail 5 metrics to measure these SLIs. 
-percentage uptime per month - availabiliy
-no of server downtimes in the month -errors
+#done
+percentage uptime per month - availability
+no of server downtimes in the month - cpu errors
 latency rate per order -latency
 total orders/requests per month - traffic
 total fulfillment of orders per month
 
 
 ## Create a Dashboard to measure our SLIs
-*TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
+*TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. 
+Create a dashboard that show these values over a 24 hour period and take a screenshot.
 
 ## Tracing our Flask App
-*TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
+*TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. 
+Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.- 
 
 ## Jaeger in Dashboards
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
+...
 
 ## Report Error
-*TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
+*TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and 
+to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
+
+#Can't find my screenshot, not to worry i will update my github where it belongs later.
 
 TROUBLE TICKET
 
 Name: Damilola Banjoko
 
-Date: 27/11/2021
+Date: 27/11/2021, updated!
 
 Subject: SLI feedback
 
-Affected Area:
+Affected Area: Uptime/ Availability
 
-Severity:
+Severity: High
 
-Description:
+Description: 500 server errors means the server could not handle the request... should i call it a denial of service?
+400 error could be an error from the client-end end or malicious attempt
 
 
 ## Creating SLIs and SLOs
-*TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
+*TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. 
+Name four SLIs that you would use to measure the success of this SLO.
 latency
 traffic
 saturation 
 errors
 
 ## Building KPIs for our plan
-*TODO*: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
+*TODO*: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen.
+ We will make a dashboard for this, but first write them down here.
 ensure 99.95% uptime 
 reduce latency by 5%
 reduce network saturation by 25%
 
 ## Final Dashboard
-*TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
+*TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. 
+Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
